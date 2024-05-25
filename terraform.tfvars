@@ -11,4 +11,11 @@ secrets = {
     description    = "second secret for dev-env"
 
   }
+
+  "for-uat-env" = {
+    name           = "uat-first-secret"
+    create_verison = false
+    description    = "first secret for uat-env"
+
+  }
 }
