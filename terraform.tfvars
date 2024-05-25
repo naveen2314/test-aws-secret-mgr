@@ -12,17 +12,24 @@ secrets = {
 
   }
 
-  "custom-uat-env" = {
-    name = "custom-uat-first-secret"
+  # "custom-uat-env" = {
+  #   name = "custom-uat-first-secret"
+  #   # create_verison = false
+  #   description = "first secret for uat-env"
+
+  # }
+
+  # "custom-prod-env" = {
+  #   name = "custom-prod-first-secret"
+  #   # create_verison = false
+  #   description = "first secret for prod-env"
+
+  # }
+  "custom-uat-env-2" = {
+    name = "custom-uat-first-secret-2"
     # create_verison = false
     description = "first secret for uat-env"
 
   }
 
-  "custom-prod-env" = {
-    name = "custom-prod-first-secret"
-    # create_verison = false
-    description = "first secret for prod-env"
-
-  }
 }
