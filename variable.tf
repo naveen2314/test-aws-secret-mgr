@@ -1,8 +1,3 @@
-variable "aws_region" {
-  description = "The AWS region to create resources in"
-  type        = string
-}
-
 variable "secrets" {
   description = "Map of secret names and their values"
   type        = map(string)
