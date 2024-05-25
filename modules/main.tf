@@ -89,6 +89,7 @@ resource "aws_secretsmanager_secret_policy" "this" {
 # Version
 ################################################################################
 
+#this is for if we want to need to change secret values.
 resource "aws_secretsmanager_secret_version" "this" {
   count = var.create_version && !(var.enable_rotation || var.ignore_secret_changes) ? 1 : 0
 
@@ -97,6 +98,9 @@ resource "aws_secretsmanager_secret_version" "this" {
   secret_binary  = var.secret_binary
   version_stages = var.version_stages
 }
+
+
+#This is for if we don't change value
 
 resource "aws_secretsmanager_secret_version" "ignore_changes" {
   count = var.create_version && (var.enable_rotation || var.ignore_secret_changes) ? 1 : 0
