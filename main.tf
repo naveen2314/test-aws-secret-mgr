@@ -17,7 +17,7 @@ resource "aws_secretsmanager_secret" "example" {
 
   lifecycle {
     ignore_changes = [
-      "secret_string"
+      secret_string
     ]
   }
 }
@@ -28,7 +28,7 @@ resource "aws_secretsmanager_secret_version" "example" {
 
   lifecycle {
     ignore_changes = [
-      "secret_string"
+      secret_string
     ]
   }
 }
