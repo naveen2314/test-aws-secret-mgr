@@ -1,11 +1,11 @@
 module "secrets" {
-  source = "./modules/"
+  source = "git::https://github.com/naveen2314/aws-secrert-mgr-module.git?ref=1a983be"
 
   for_each = var.secrets
 
-  name           = lookup(each.value, "name")
-  description    = lookup(each.value, "description", "")
-  create_version = lookup(each.value, "create_version", false)
-  secret_string  = lookup(each.value, "secret_string", null)
+  name        = lookup(each.value, "name")
+  description = lookup(each.value, "description", "")
+  # create_version = lookup(each.value, "create_version", false)
+  # secret_string  = lookup(each.value, "secret_string", null)
 
 }

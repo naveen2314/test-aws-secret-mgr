@@ -1,21 +1,21 @@
 secrets = {
-  "for-dev-env" = {
-    name           = "dev-first-secret"
-    create_verison = false
-    description    = "first secret for dev-env"
+  "custom-stg-env" = {
+    name = "custom-stg-first-secret"
+    # create_verison = false
+    description = "first secret for dev-env"
 
   }
-  "for-test-env" = {
-    name           = "dev-second-secret"
-    create_verison = false
-    description    = "second secret for dev-env"
+  "custom-test-env" = {
+    name = "custom-dev-second-secret"
+    # create_verison = false
+    description = "second secret for dev-env"
 
   }
 
-  "for-uat-env" = {
-    name           = "uat-first-secret"
-    create_verison = false
-    description    = "first secret for uat-env"
+  "custom-uat-env" = {
+    name = "custom-uat-first-secret"
+    # create_verison = false
+    description = "first secret for uat-env"
 
   }
 }
