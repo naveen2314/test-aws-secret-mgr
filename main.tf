@@ -1,5 +1,5 @@
 module "secrets" {
-  source = "git::https://github.com/naveen2314/aws-secrert-mgr-module.git?ref=613af22"
+  source = "git::https://github.com/naveen2314/aws-secrert-mgr-module.git?ref=0c26db1"
 
   for_each = var.secrets
 
