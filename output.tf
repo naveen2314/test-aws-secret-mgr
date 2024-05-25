@@ -5,5 +5,5 @@ output "secrets_arns" {
 
 output "secrets_id" {
   description = "The names of the created secrets"
-  value       = { for k, v in module.secrets : k => v.secrets_id }
+  value       = { for k, v in module.secrets : k => v.secret_id }
 }
