@@ -9,3 +9,11 @@
 #   type        = map(string)
 #   default     = {}
 # }
+
+# Define a map of secrets
+variable "secrets" {
+  type = map(object({
+    value = string
+  }))
+  description = "A map of secrets to be created"
+}
