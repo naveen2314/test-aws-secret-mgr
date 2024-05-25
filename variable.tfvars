@@ -1,14 +1,14 @@
-# secrets = {
-#   "secret1" = ""
-#   "secret2" = ""
-#   # Add more secrets as needed
-# }
-
-# tags = {
-#   Environment = "dev"
-#   ManagedBy   = "Terraform"
-# }
 secrets = {
-  secret1 = { value = null }
-  secret2 = { value = null }
+  "for-dev-env" = {
+    name           = "dev-first-secret"
+    create_verison = false
+    description    = "first secret for dev-env"
+
+  }
+  "for-test-env" = {
+    name           = "dev-second-secret"
+    create_verison = false
+    description    = "second secret for dev-env"
+
+  }
 }
