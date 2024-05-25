@@ -14,21 +14,10 @@
 resource "aws_secretsmanager_secret" "example" {
   name        = "example-secret" # Replace with your desired secret name
   description = "An example secret"
-
-  lifecycle {
-    ignore_changes = [
-      secret_string
-    ]
-  }
 }
 
 resource "aws_secretsmanager_secret_version" "example" {
   secret_id     = aws_secretsmanager_secret.example.id
   secret_string = "" # Initial blank value
 
-  lifecycle {
-    ignore_changes = [
-      secret_string
-    ]
-  }
 }
