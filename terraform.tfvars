@@ -18,4 +18,11 @@ secrets = {
     description = "first secret for uat-env"
 
   }
+
+  "custom-prod-env" = {
+    name = "custom-prod-first-secret"
+    # create_verison = false
+    description = "first secret for prod-env"
+
+  }
 }
