@@ -1,12 +1,11 @@
 module "secrets" {
-  source = "git::https://github.com/naveen2314/aws-secrert-mgr-module.git?ref=0c26db1"
+  source = "./modules/terraform-aws-secrets-manager"
 
   for_each = var.secrets
 
-  secret_name   = each.key
-  secret_string = each.value
-
-  description = "Managed by Terraform"
-  tags        = var.tags
+  name           = lookup(each.value, "name")
+  description    = lookup(each.value, "description", "")
+  create_version = lookup(each.value, "create_version", false)
+  secret_string  = lookup(each.value, "secret_string", null)
 
 }
