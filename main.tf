@@ -1,5 +1,5 @@
 module "secrets" {
-  source = "./modules/terraform-aws-secrets-manager"
+  source = "./modules/"
 
   for_each = var.secrets
 
